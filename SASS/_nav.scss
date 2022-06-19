@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 53px;
+  gap: 110px;
+
+  &__icons {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.menu {
+
+  &__list {
+    display: flex;
+    gap: 70px;
+  }
+
+  &__link {
+    font-family: $nav-font-famile;
+    font-size: 14px;
+    line-height: 18px;
+    color: $secondary-color;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      border: 1px solid $secondary-color;
+      border-radius: 50%;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: -25px;
+
+    }
+
+    &:hover::before {
+      background-color: $secondary-color;
+    }
+  }
+}

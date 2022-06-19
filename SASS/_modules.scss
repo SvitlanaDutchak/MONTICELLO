@@ -1,0 +1,62 @@
+.img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.icon {
+  color: $secondary-color;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid #FFFFFF;
+
+  &:hover {
+    border: 1px solid $main-color;
+    color: $main-color;
+  }
+
+  &--pad {
+    padding: 10px 13px;
+  }
+}
+
+.button {
+  font-family: $base-font-famile;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+  padding: 16px 57px;
+  background: transparent;
+  border: 1px solid $main-color;
+
+  &--form {
+    align-self: flex-end;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.input {
+  width: 310px;
+  border: none;
+  border-bottom: 1px solid #2C4058;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000;
+  letter-spacing: 1.5px;
+  background-color: transparent;
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}

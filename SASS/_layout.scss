@@ -1,0 +1,23 @@
+.container {
+  max-width: 1300px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(251.06deg, #7E5AFF -2.19%, #55B7FF 103.21%);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__btn-down {
+    padding-bottom: 53px;
+  }
+}
