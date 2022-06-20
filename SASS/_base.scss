@@ -9,3 +9,13 @@ body {
   color: $main-color;
 }
 
+
+.map {
+  height: 700px;
+}
+
+.marker {
+  padding: 27px;
+  background-color: $main-color;
+  // background-color: $secondary-color;
+}

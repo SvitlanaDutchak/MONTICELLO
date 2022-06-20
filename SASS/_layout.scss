@@ -4,20 +4,53 @@
   margin: 0 auto;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 53px;
+  gap: 110px;
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, 0);
+  left: 50%;
+
+  &__icons {
+    display: flex;
+    gap: 20px;
+  }
+}
+
 .hero {
-  background: linear-gradient(251.06deg, #7E5AFF -2.19%, #55B7FF 103.21%);
+  background-image: url(../img/bg/tu-tram-pham-202263.png), linear-gradient(251.06deg, #7E5AFF -2.19%, #55B7FF 103.21%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 100vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  position: relative;
+
+  &--bg1 {
+    background-image: url(../img/bg/tu-tram-pham-202263.png), linear-gradient(251.06deg, #d9be82dd -2.19%, #55B7FF 103.21%);
+  }
+
+  &--bg2 {
+    background-image: url(../img/bg/tu-tram-pham-202263.png), linear-gradient(251.06deg, #e469ca -2.19%, #55B7FF 103.21%);
+  }
 
   &__content {
     text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    max-width: 917px;
   }
 
   &__btn-down {
+    position: absolute;
     padding-bottom: 53px;
+    transform: translate(-50%, -50%);
+    top: 97%;
+    left: 50%;
   }
 }

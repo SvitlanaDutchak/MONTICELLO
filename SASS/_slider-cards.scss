@@ -45,6 +45,7 @@
   background-color: transparent;
   border: 1px solid #FFFFFF;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .slider .slick-arrow.slick-prev {
@@ -77,6 +78,7 @@
 
 
 .slick-dots button {
+  cursor: pointer;
   font-size: 0;
   height: 15px;
   border: 1px solid #FFFFFF;
@@ -86,4 +88,22 @@
 
 .slick-dots li.slick-active button {
   background-color: #FFFFFF;
+}
+
+.hero-slider {
+  position: relative;
+  height: 100vh;
+}
+
+.slick-vertical .slick-slide {
+  height: 100vh;
+}
+
+.hero-slider .slick-dots {
+flex-direction: column;
+position: absolute;
+right: 52px;
+transform: translate(0, -50%);
+top: 50%;
+margin-top: 0px;
 }

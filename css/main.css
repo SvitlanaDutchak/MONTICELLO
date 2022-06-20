@@ -1,7 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-v2.0 | 20110126
-License: none (public domain)
-*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -68,9 +64,66 @@ body {
   color: #2C4058;
 }
 
+.map {
+  height: 700px;
+}
+
+.marker {
+  padding: 27px;
+  background-color: #2C4058;
+}
+
+.about {
+  position: relative;
+}
+
+.about__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 70px;
+  z-index: 1;
+}
+
+.about__card:last-child {
+  margin: 200px 0 140px;
+}
+
+.about__content {
+  width: 50%;
+}
+
+.background {
+  width: 40%;
+  height: 470px;
+  background-color: #55B7FF;
+  position: absolute;
+  z-index: -1;
+}
+
+.background--left {
+  top: 90px;
+  left: 0px;
+}
+
+.background--right {
+  background: #7E5AFF;
+  right: 0;
+  bottom: 50px;
+}
+
 .news {
   padding: 130px 0;
-  background: linear-gradient(237.1deg, #24CCFA 11.16%, #3C7FD4 89.18%);
+  background-image: url(../img/bg/city.png), linear-gradient(237.1deg, #24CCFA 11.16%, #3C7FD4 89.18%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .gallery__btn {
@@ -115,8 +168,16 @@ body {
           transform: translate(-50%, -50%);
 }
 
-.footer {
+.image-cards__item--icon:hover {
   background: linear-gradient(251.06deg, #7E5AFF -2.19%, #55B7FF 103.21%);
+}
+
+.footer {
+  background-image: url(../img/bg/scott-webb.png), linear-gradient(251.06deg, #7E5AFF -2.19%, #55B7FF 103.21%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
 .footer-content {
@@ -141,12 +202,13 @@ body {
 .contacts {
   width: 770px;
   background-color: #FFFFFF;
-  position: relative;
+  position: absolute;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   left: 50%;
-  top: 150px;
+  top: -300px;
   padding: 70px 50px;
+  z-index: 5;
 }
 
 .contacts__card {
@@ -166,24 +228,6 @@ body {
   margin-bottom: 20px;
 }
 
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 53px;
-  gap: 110px;
-}
-
-.header__icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
-}
-
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -198,6 +242,7 @@ body {
   color: #FFFFFF;
   text-transform: uppercase;
   position: relative;
+  white-space: nowrap;
 }
 
 .menu__link::before {
@@ -271,6 +316,7 @@ body {
   background-color: transparent;
   border: 1px solid #FFFFFF;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .slider .slick-arrow.slick-prev {
@@ -308,6 +354,7 @@ body {
 }
 
 .slick-dots button {
+  cursor: pointer;
   font-size: 0;
   height: 15px;
   border: 1px solid #FFFFFF;
@@ -319,37 +366,92 @@ body {
   background-color: #FFFFFF;
 }
 
+.hero-slider {
+  position: relative;
+  height: 100vh;
+}
+
+.slick-vertical .slick-slide {
+  height: 100vh;
+}
+
+.hero-slider .slick-dots {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  right: 52px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  top: 50%;
+  margin-top: 0px;
+}
+
 .container {
   max-width: 1300px;
   padding: 0 10px;
   margin: 0 auto;
 }
 
-.hero {
-  background: linear-gradient(251.06deg, #7E5AFF -2.19%, #55B7FF 103.21%);
-  height: 100vh;
-  width: 100%;
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding-top: 53px;
+  gap: 110px;
+  position: absolute;
+  z-index: 2;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  left: 50%;
+}
+
+.header__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.hero {
+  background-image: url(../img/bg/tu-tram-pham-202263.png), linear-gradient(251.06deg, #7E5AFF -2.19%, #55B7FF 103.21%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.hero--bg1 {
+  background-image: url(../img/bg/tu-tram-pham-202263.png), linear-gradient(251.06deg, #d9be82dd -2.19%, #55B7FF 103.21%);
+}
+
+.hero--bg2 {
+  background-image: url(../img/bg/tu-tram-pham-202263.png), linear-gradient(251.06deg, #e469ca -2.19%, #55B7FF 103.21%);
 }
 
 .hero__content {
   text-align: center;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  max-width: 917px;
 }
 
 .hero__btn-down {
+  position: absolute;
   padding-bottom: 53px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 97%;
+  left: 50%;
 }
 
 .img {
@@ -384,6 +486,12 @@ body {
   padding: 16px 57px;
   background: transparent;
   border: 1px solid #2C4058;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: linear-gradient(237.1deg, #24CCFA 11.16%, #3C7FD4 89.18%);
+  font-weight: 700;
 }
 
 .button--form {
@@ -440,6 +548,7 @@ body {
   letter-spacing: 0.1em;
   color: #FFFFFF;
   margin-bottom: 20px;
+  white-space: nowrap;
 }
 
 .text {
@@ -448,17 +557,40 @@ body {
   color: #FFFFFF;
 }
 
+.dark-text {
+  line-height: 30px;
+  margin: 19px 0 41px;
+}
+
+.text-italic {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+  margin-top: 60px;
+}
+
+.sub-title-sm {
+  font-size: 22px;
+  line-height: 27px;
+  color: #2C4058;
+}
+
 .sub-title {
   font-weight: 700;
   font-size: 44px;
   line-height: 54px;
-  text-align: center;
-  margin: 120px 0 89px;
-  position: relative;
   text-transform: uppercase;
 }
 
-.sub-title::before {
+.sub-title--line {
+  text-align: center;
+  margin: 120px 0 89px;
+  position: relative;
+}
+
+.sub-title--line::before {
   content: '';
   position: absolute;
   width: 100px;
@@ -480,7 +612,7 @@ body {
 }
 
 .sub-title--mr {
-  margin: 90px 0 42px;
+  margin: 30px 0 42px;
 }
 
 .title-small {

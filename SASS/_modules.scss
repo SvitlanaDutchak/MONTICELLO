@@ -30,6 +30,12 @@
   padding: 16px 57px;
   background: transparent;
   border: 1px solid $main-color;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(237.1deg, #24CCFA 11.16%, #3C7FD4 89.18%);
+    font-weight: 700;
+  }
 
   &--form {
     align-self: flex-end;
