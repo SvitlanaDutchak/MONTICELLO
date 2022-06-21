@@ -7,20 +7,22 @@ $(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [{
-        breakpoint: 600,
+        breakpoint: 1300,
         settings: {
           slidesToShow: 2,
+          arrows: false
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 550,
         settings: {
           slidesToShow: 1,
+          arrows: false
         }
       }
     ]
   });
-  
+
   $('.hero-slider').slick({
     arrows: false,
     dots: true,
@@ -31,195 +33,53 @@ $(document).ready(function () {
     vertical: true,
     autoplay: true,
   })
-  
+
   $('.menu li a').click(function () { // 1
-		elementClick = $(this).attr('href');
-		destination = $(elementClick).offset().top;
-		$('body,html').animate({scrollTop: destination }, 1400);
-	});
+    elementClick = $(this).attr('href');
+    destination = $(elementClick).offset().top;
+    $('body,html').animate({
+      scrollTop: destination
+    }, 1400);
+  });
 
 });
 
-const mapStyles = [{
-    "elementType": "geometry",
-    "stylers": [{
-      "color": "#f5f5f5"
-    }]
-  },
-  {
-    "elementType": "labels.icon",
-    "stylers": [{
-      "visibility": "off"
-    }]
-  },
-  {
-    "elementType": "labels.text.fill",
-    "stylers": [{
-      "color": "#616161"
-    }]
-  },
-  {
-    "elementType": "labels.text.stroke",
-    "stylers": [{
-      "color": "#f5f5f5"
-    }]
-  },
-  {
-    "featureType": "administrative.country",
-    "elementType": "geometry.stroke",
-    "stylers": [{
-      "color": "#ac6c6c"
-    }]
-  },
-  {
-    "featureType": "administrative.land_parcel",
-    "elementType": "labels.text.fill",
-    "stylers": [{
-      "color": "#bdbdbd"
-    }]
-  },
-  {
-    "featureType": "poi",
-    "elementType": "geometry",
-    "stylers": [{
-      "color": "#eeeeee"
-    }]
-  },
-  {
-    "featureType": "poi",
-    "elementType": "labels.text.fill",
-    "stylers": [{
-      "color": "#757575"
-    }]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "geometry",
-    "stylers": [{
-      "color": "#e5e5e5"
-    }]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "geometry.fill",
-    "stylers": [{
-      "color": "#dedede"
-    }]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "labels.text.fill",
-    "stylers": [{
-      "color": "#9e9e9e"
-    }]
-  },
-  {
-    "featureType": "road",
-    "elementType": "geometry",
-    "stylers": [{
-      "color": "#ffffff"
-    }]
-  },
-  {
-    "featureType": "road.arterial",
-    "elementType": "labels.text.fill",
-    "stylers": [{
-      "color": "#757575"
-    }]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "geometry",
-    "stylers": [{
-      "color": "#dadada"
-    }]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "labels.text.fill",
-    "stylers": [{
-      "color": "#616161"
-    }]
-  },
-  {
-    "featureType": "road.local",
-    "elementType": "labels.text.fill",
-    "stylers": [{
-      "color": "#9e9e9e"
-    }]
-  },
-  {
-    "featureType": "transit.line",
-    "elementType": "geometry",
-    "stylers": [{
-      "color": "#e5e5e5"
-    }]
-  },
-  {
-    "featureType": "transit.station",
-    "elementType": "geometry",
-    "stylers": [{
-      "color": "#eeeeee"
-    }]
-  },
-  {
-    "featureType": "water",
-    "elementType": "geometry",
-    "stylers": [{
-      "color": "#c9c9c9"
-    }]
-  },
-  {
-    "featureType": "water",
-    "elementType": "geometry.fill",
-    "stylers": [{
-      "color": "#c7c7c7"
-    }]
-  },
-  {
-    "featureType": "water",
-    "elementType": "labels.text.fill",
-    "stylers": [{
-      "color": "#9e9e9e"
-    }]
-  }
-];
+
 
 const footer = document.querySelector('.footer');
-const btnDown = document.querySelectorAll('.hero__btn-down');
+const btnDown = document.querySelector('.btn-down');
 
-for (let i = 0; i < btnDown.length; i++) {
-  btnDown[i].addEventListener("click", function (event) {
-    footer.scrollIntoView({
-        behavior: "smooth"
-      }),
+btnDown.addEventListener("click", function (event) {
+  footer.scrollIntoView({
+      behavior: "smooth"
+    }),
 
-      event.preventDefault()
+    event.preventDefault()
+});
 
-  })
-}
+const hamburger = document.querySelector(".btn-menu");
+const navMenu = document.querySelector(".menu");
+const menuIcons = document.querySelector(".menu-icons");
+const links = document.querySelectorAll(".menu__link");
+const closeBurgerButton = document.querySelector(".close-button");
 
-function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    center: {
-      lat: 40.682122301957975,
-      lng: -74.0209732429698
-    },
-    zoom: 12,
-    styles: mapStyles,
-  });
+hamburger.addEventListener("click", mobileMenu);
 
-  const marker = "img/icons/circle-solid (1).svg";
+function mobileMenu() {
+  hamburger.classList.toggle("is-active");
+  navMenu.classList.toggle("is-open");
+  document.body.classList.toggle('lock-scroll');
+  menuIcons.classList.toggle("is-open");
+  navMenu.append(menuIcons);
+};
 
-  new google.maps.Marker({
-    position: {
-      lat: 40.687872473718095,
-      lng: -73.90846439331666
-    },
-    map,
-    title: "OUR LOCATION",
-    icon: marker
+
+for (let i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function () {
+    document.body.classList.remove('lock-scroll');
   });
 }
 
-window.initMap = initMap();
+closeBurgerButton.addEventListener("click", function () {
+  document.body.classList.add('lock-scroll');
+})

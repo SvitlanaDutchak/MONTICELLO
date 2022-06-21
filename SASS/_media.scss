@@ -1,0 +1,205 @@
+@media (max-width: 1300px) {
+  .slider .slick-track {
+    height: 635px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .lock-scroll {
+    overflow: hidden;
+  }
+
+  .header {
+    width: 100%;
+    justify-content: center;
+
+    &__logo {
+      z-index: 2;
+    }
+
+  }
+
+  .menu {
+    display: none;
+    z-index: 1;
+    padding: 120px 30px 0;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    &__link {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+
+    &.is-open {
+      opacity: 1;
+      position: fixed;
+      background-image: url(../img/bg/city.png), linear-gradient(237.1deg, #24CCFA 11.16%, #3C7FD4 89.18%);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .menu-icons {
+    display: none;
+    z-index: 1;
+
+    &.is-open {
+      display: flex;
+      margin-top: 40px;
+    }
+  }
+
+  .btn-menu {
+    display: block;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
+  .text {
+    white-space: nowrap;
+
+  }
+
+  .image-cards__item {
+    max-width: 100%;
+  }
+
+  .image {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 790px) {
+  .slider .slick-track {
+    height: 550px;
+  }
+
+  .title,
+  .text {
+    white-space: normal;
+  }
+
+  .title {
+    line-height: 50px;
+  }
+
+  .about {
+    &__card {
+      flex-wrap: wrap;
+
+      &:last-child {
+        margin: 80px 0;
+      }
+    }
+
+    &__content {
+      width: 100%;
+    }
+
+  }
+
+  .contacts {
+    width: 100%;
+    background-color: #FFFFFF;
+    position: relative;
+    transform: translate(0, 0);
+    left: 0;
+    top: 0px;
+    padding: 70px 50px;
+  }
+
+
+}
+
+@media (max-width: 500px) {
+  .footer-content {
+    padding: 80px 0;
+
+    &__item {
+      flex-wrap: wrap-reverse;
+      gap: 40px;
+    }
+  }
+
+  .background {
+    height: 300px;
+
+    &--left {
+      top: 60px;
+    }
+
+    &--right {
+      bottom: 100px;
+
+    }
+  }
+
+  .contacts {
+    transform: translate(0, 0);
+    left: 0;
+    top: 0;
+    padding: 40px 20px;
+  }
+
+  .image-cards {
+    &__item {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .header {
+    gap: 15px;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  .hero-slider .slick-dots {
+    right: 22px;
+  }
+
+  .sub-title {
+    font-size: 32px;
+
+    &--line {
+      margin: 50px 0;
+    }
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .slick-dots {
+    gap: 20px;
+  }
+
+  .about__card {
+    gap: 50px;
+  }
+
+  .news {
+    padding: 60px 0;
+  }
+}

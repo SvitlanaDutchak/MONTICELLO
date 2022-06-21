@@ -1,5 +1,5 @@
 .container {
-  max-width: 1300px;
+  max-width: 1200px;
   padding: 0 10px;
   margin: 0 auto;
 }
@@ -30,11 +30,19 @@
   position: relative;
 
   &--bg1 {
-    background-image: url(../img/bg/tu-tram-pham-202263.png), linear-gradient(251.06deg, #d9be82dd -2.19%, #55B7FF 103.21%);
+    background-image: url(../img/bg/tu-tram-pham-202263.png), linear-gradient(251.06deg, #ff6958dd -2.19%, #55B7FF 103.21%);
   }
 
   &--bg2 {
-    background-image: url(../img/bg/tu-tram-pham-202263.png), linear-gradient(251.06deg, #e469ca -2.19%, #55B7FF 103.21%);
+    background-image: url(../img/bg/tu-tram-pham-202263.png), linear-gradient(251.06deg, #69e4e4 -2.19%, #daff55 103.21%);
+  }
+
+  &--bg3 {
+    background-image: url(../img/bg/tu-tram-pham-202263.png), linear-gradient(251.06deg, #ef63d1e2 -2.19%, #f54ea1 103.21%);
+  }
+
+  &--bg4 {
+    background-image: url(../img/bg/tu-tram-pham-202263.png), linear-gradient(251.06deg, #e60707 -2.19%, #55B7FF 103.21%);
   }
 
   &__content {
@@ -46,11 +54,11 @@
     max-width: 917px;
   }
 
-  &__btn-down {
-    position: absolute;
-    padding-bottom: 53px;
-    transform: translate(-50%, -50%);
-    top: 97%;
-    left: 50%;
-  }
+}
+.btn-down {
+  position: absolute;
+  padding-bottom: 53px;
+  transform: translate(-50%, -50%);
+  top: 97%;
+  left: 50%;
 }

@@ -7,6 +7,7 @@
     flex-direction: column;
     background-color: $secondary-color;
     padding-bottom: 30px;
+    
   }
 
   &__item:nth-child(2) {
@@ -33,6 +34,10 @@
   &__img {
     border-radius: 50%;
   }
+}
+
+.slider .slick-track {
+  height: 550px;
 }
 
 .slider .slick-arrow {

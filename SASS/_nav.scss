@@ -1,6 +1,4 @@
 
-
-
 .menu {
 
   &__list {
@@ -34,4 +32,32 @@
       background-color: $secondary-color;
     }
   }
+}
+
+.btn-menu {
+  display: none;
+  cursor: pointer;
+  z-index: 2;
+
+  .open-button {
+    display: block;
+  }
+  .close-button {
+    display:none;
+  }
+
+  &.is-active {
+    // position: fixed;
+    // top: 23px;
+    // right: 25px;
+
+    .open-button {
+      display: none;
+    }
+    .close-button {
+      display: block;
+    }
+  
+  }
+
 }
