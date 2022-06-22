@@ -16,26 +16,26 @@
   &__content {
     width: 50%;
   }
-}
 
-.background {
-  width: 40%;
-  height: 430px;
-  background-color: #55B7FF;
-  position: absolute;
-  z-index: -1;
+  &__background {
+    width: 40%;
+    height: 430px;
+    background-color: #55B7FF;
+    position: absolute;
+    z-index: -1;
 
-  &--left {
-    top: 90px;
-    left: 0px;
+    &--left {
+      top: 90px;
+      left: 0px;
+    }
+
+    &--right {
+      background: #7E5AFF;
+      right: 0;
+      bottom: 50px;
+    }
+
   }
-
-  &--right {
-    background: #7E5AFF;
-    right: 0;
-    bottom: 50px;
-  }
-
 }
 
 .news {
@@ -53,47 +53,43 @@
   }
 }
 
-
-.image {
+.gallery-images {
   display: flex;
   gap: 10px;
-
 
   &__card {
     width: 100%;
-  }
-}
 
-.image-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+    &--icon {
+      position: relative;
+
+      &::before {
+        content: url(../img/icons/360-icon.svg);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover {
+        background: linear-gradient(251.06deg, #7e5aff79 -2.19%, #55B7FF 103.21%);
+      }
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
 
   &__item {
     width: 49%;
   }
 }
-
-.image-icon {
-  position: relative;
-
-  &::before {
-    content: url(../img/icons/360-icon.svg);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &:hover {
-    background: linear-gradient(251.06deg, #7e5aff79 -2.19%, #55B7FF 103.21%);
-  }
-}
-
-
 
 .map {
   height: 700px;
@@ -106,7 +102,6 @@
   background-size: cover;
   position: relative;
 }
-
 
 .footer-content {
   padding: 220px 0 180px;
@@ -121,8 +116,6 @@
     gap: 20px;
   }
 }
-
-
 
 .contacts {
   width: 770px;

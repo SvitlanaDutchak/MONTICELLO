@@ -33,8 +33,8 @@
   cursor: pointer;
 
   &:hover {
-    background: linear-gradient(237.1deg, #24CCFA 11.16%, #3C7FD4 89.18%);
     font-weight: 700;
+    border: 2px solid #55B7FF;
   }
 
   &--form {

@@ -46,7 +46,7 @@ $(document).ready(function () {
 
 
 
-const footer = document.querySelector('.footer');
+const footer = document.querySelector('.footer-content');
 const btnDown = document.querySelector('.btn-down');
 
 btnDown.addEventListener("click", function (event) {

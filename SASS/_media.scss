@@ -36,7 +36,6 @@
       font-weight: 700;
     }
 
-
     &.is-open {
       opacity: 1;
       position: fixed;
@@ -75,15 +74,14 @@
 
   .text {
     white-space: nowrap;
-
   }
 
-  .image-cards__item {
-    max-width: 100%;
-  }
-
-  .image {
+  .gallery-images {
     flex-wrap: wrap;
+
+    &__item {
+      max-width: 100%;
+    }
   }
 }
 
@@ -102,11 +100,12 @@
   }
 
   .about {
+
     &__card {
       flex-wrap: wrap;
 
       &:last-child {
-        margin: 80px 0;
+        margin: 70px 0;
       }
     }
 
@@ -114,6 +113,13 @@
       width: 100%;
     }
 
+    &__background {
+      width: 70%;
+
+      &--right {
+        bottom: 80px;
+      }
+    }
   }
 
   .contacts {
@@ -125,30 +131,30 @@
     top: 0px;
     padding: 70px 50px;
   }
-
-
 }
 
-@media (max-width: 500px) {
+@media (max-width: 520px) {
+
+  .about {
+    &__card {
+      gap: 10px;
+    }
+
+    &__background {
+      height: 300px;
+
+      &--right {
+        bottom: 100px;
+      }
+    }
+  }
+
   .footer-content {
     padding: 80px 0;
 
     &__item {
       flex-wrap: wrap-reverse;
       gap: 40px;
-    }
-  }
-
-  .background {
-    height: 300px;
-
-    &--left {
-      top: 60px;
-    }
-
-    &--right {
-      bottom: 100px;
-
     }
   }
 
@@ -159,14 +165,14 @@
     padding: 40px 20px;
   }
 
-  .image-cards {
+  .gallery-images {
     &__item {
       width: 100%;
     }
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 417px) {
   .header {
     gap: 15px;
   }
@@ -191,12 +197,30 @@
     width: 100%;
   }
 
-  .slick-dots {
-    gap: 20px;
+  .about {
+    &__card {
+      gap: 50px;
+    }
+
+    &__background {
+      height: 200px;
+
+      &--right {
+        bottom: 120px;
+      }
+
+      &--left {
+        top: 50px;
+      }
+    }
   }
 
-  .about__card {
-    gap: 50px;
+  .text-italic {
+    margin-top: 20px;
+  }
+
+  .slick-dots {
+    gap: 20px;
   }
 
   .news {
