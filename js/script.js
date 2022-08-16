@@ -2,9 +2,10 @@ $(document).ready(function () {
 
   $('.slider').slick({
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 3,
+    autoplay: true,
     slidesToScroll: 1,
     responsive: [{
         breakpoint: 1300,
@@ -44,25 +45,27 @@ $(document).ready(function () {
 
 });
 
-
-
-const footer = document.querySelector('.footer-content');
+const aboutSection = document.querySelector('.about');
 const btnDown = document.querySelector('.btn-down');
 
 btnDown.addEventListener("click", function (event) {
-  footer.scrollIntoView({
+  aboutSection.scrollIntoView({
       behavior: "smooth"
     }),
 
     event.preventDefault()
 });
 
-const hamburger = document.querySelector(".btn-menu");
-const navMenu = document.querySelector(".menu");
 const menuIcons = document.querySelector(".menu-icons");
 const links = document.querySelectorAll(".menu__link");
 const closeBurgerButton = document.querySelector(".close-button");
 
+
+
+
+
+const hamburger = document.querySelector(".btn-menu");
+const navMenu = document.querySelector(".menu");
 hamburger.addEventListener("click", mobileMenu);
 
 function mobileMenu() {
@@ -72,6 +75,8 @@ function mobileMenu() {
   menuIcons.classList.toggle("is-open");
   navMenu.append(menuIcons);
 };
+
+
 
 
 for (let i = 0; i < links.length; i++) {
