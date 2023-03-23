@@ -3,6 +3,7 @@ $(document).ready(function () {
   $('.slider').slick({
     dots: true,
     infinite: true,
+    autoplaySpeed: 1000,
     speed: 300,
     slidesToShow: 3,
     autoplay: true,
